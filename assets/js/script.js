@@ -159,7 +159,7 @@ let ForgotPassword = () =>{
     sendPasswordResetEmail(auth, EmailInp2.value)
     .then(()=>{
         alert("Password reset link has been sent to your email.")
-        wrapper2.classList.remove('active-popup');
+        wrapper2.classList.remove('active-popup2');
         wrapper.classList.add('active-popup');
     })
     .catch((error)=>{
