@@ -35,17 +35,14 @@
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center justify-content-between">
-      <h1 class="logo"><a href="index.html">MindPath</a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-
+      
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#services">Services</a></li>
           <li><a class="nav-link scrollto " href="#testimonials">Testimonials</a></li>
-          <li><a class="nav-link scrollto" href="#pricing">Subscribtions</a></li>
+          <!--li><a class="nav-link scrollto" href="#pricing">Subscribtions</a></li-->
           <li class="dropdown"><a href="#"><span>Products</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li class="dropdown"><a href="resource.html"><span>Resources</span> <i class="bi bi-chevron-right"></i></a>
@@ -70,14 +67,98 @@
             </ul>
           </li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-          <li><a class="getstarted scrollto" href="#about">Get Started</a></li>
+          
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
+        
       </nav><!-- .navbar -->
+      <h1 class="logo"><a href="index.html">MindPath</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      <nav class="navba">
+        <ul>
+          <li class="getstart out" id="signOutBtn">SIGNOUT</li>
+          <li class="btnLogin-popup getstart in" id="login"  >LOGIN</li>
 
+         
+        </ul>
+        </nav>
     </div>
   </header><!-- End Header -->
+  <main id="main">
+  <!-- ======= LOGIN popup ======= -->
+  <div class="wrapper2">
+    <span class="icon-close2">
+      <ion-icon name="close"></ion-icon>
+    </span>
+    <div class="form-box">
+      <h3>Enter Email to reset</h3>
+      <form action="#" id="MainForm2">
+        <div class="input-box">
+          <span class="icon"><ion-icon name="mail"></ion-icon></span>
+          <input type="email" class="snd" id="emailInp2" placeholder="Email" required>
+          <button type="submit"  class="btn">Send</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="wrapper">
+    <span class="icon-close">
+      <ion-icon name="close"></ion-icon>
+    </span>
+    <div class="form-box log">
+      <h2>LOGIN</h2>
+      <form action="#" id="MainForm">
+        <div class="input-box">
+          <span class="icon"><ion-icon name="mail"></ion-icon></span>
+          <input type="email" id="emailInp" placeholder="Email" required>
 
+        </div>
+        <div class="input-box">
+          <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+          <input type="password" id="passwordInp" placeholder="Password" required>
+        </div>
+        <div class="remember-forgot">
+          <label ><input type="checkbox" id="rememberMeCheckbox">Remember me</label>
+          <label class="forgotpass forgot">Forgot Password?</label>
+        </div>
+        <button type="submit"  class="btn" id="loginbtn">Login</button>
+        <div class="login-register">
+          <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
+        </div>
+      </form>
+    </div>
+
+    <div class="form-box register">
+      <h2>Registration</h2>
+      <form id="MainForm1">
+        <div class="input-box">
+          <span class="icon"><ion-icon name="person"></ion-icon></span>
+          <input type="text" id="usernameInp1" placeholder="Username" required>
+
+        </div>
+        <div class="input-box">
+          <span class="icon"><ion-icon name="mail"></ion-icon></span>
+          <input type="email" id="emailInp1" placeholder="Email" required>
+
+        </div>
+        <div class="input-box">
+          <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+          <input type="password" id="passwordInp1" placeholder="Password" required>
+
+        </div>
+        <div class="remember-forgot">
+          <label ><input type="checkbox" required>I Agree to Terms & Conditions</label>
+        </div>
+        <button type="submit" onclick=""  class="btn">Register</button>
+        <div class="login-register">
+          <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+        </div>
+      </form>
+    </div>
+
+  </div>
+  <!-- End LOGIN popup -->
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
 
@@ -370,7 +451,7 @@
     </section><!-- End Testimonials Section -->
 
     <!-- ======= Pricing Section ======= -->
-    <section id="pricing" class="pricing section-bg">
+    <!--section id="pricing" class="pricing section-bg">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
@@ -452,7 +533,7 @@
         </div>
 
       </div>
-    </section><!-- End Pricing Section -->
+    </section--><!-- End Pricing Section -->
 
    
     <!-- ======= Contact Section ======= -->
@@ -601,8 +682,21 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
 
+    <!--login icons-->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script type="module" src="assets/js/script.js"></script>
+  
+
+
+  <!-- Include the Firebase initialization script -->
+
+
+
 
 </body>
 
