@@ -264,3 +264,50 @@
   new PureCounter();
 
 })()
+//password icon
+var a;
+let pass=()=>{
+    if(a==1){
+        document.getElementById('passwordInp').type="password";
+        document.getElementById('pass-icon').name="lock-closed";
+        a=0;
+    }
+    else{
+        document.getElementById('passwordInp').type="text";
+        document.getElementById('pass-icon').name="lock-open";
+        a=1;
+    }
+}
+
+var a1;
+let pass1=()=>{
+    if(a1==1){
+        document.getElementById('passwordInp1').type="password";
+        document.getElementById('pass-icon1').name="lock-closed";
+        a1=0;
+    }
+    else{
+        document.getElementById('passwordInp1').type="text";
+        document.getElementById('pass-icon1').name="lock-open";
+        a1=1;
+    }
+}
+
+ /**
+   * User profile menu
+   */
+ let subMenu= document.getElementById("subMenu");
+ let menuButton = document.getElementById("menuButton");
+
+
+      // Open or close menu when profile button is clicked
+      menuButton.addEventListener('click', function () {
+        subMenu.classList.toggle('open-menu');
+      });
+
+      // Close menu when clicking outside of it
+      document.addEventListener('click', function (event) {
+        if (!subMenu.contains(event.target) && event.target !== menuButton) {
+          subMenu.classList.remove('open-menu');
+        }
+      });
