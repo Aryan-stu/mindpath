@@ -1,3 +1,4 @@
+
 /**
  * import firebase
  */
@@ -5,7 +6,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
 import { getDatabase, set, ref, get, child } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendPasswordResetEmail } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
-
+import { getStorage, ref as storageRef, uploadBytes, getDownloadURL, deleteObject, listAll } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-storage.js";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -77,7 +78,7 @@ let RegisterUser = evt =>{
 
     createUserWithEmailAndPassword(auth, EmailInp1.value, PasswordInp1.value)
     .then((Credentials)=>{
-        set(ref(db, 'UserAuthList/' + Credentials.user.uid), {
+        set(dbref(db, 'UserAuthList/' + Credentials.user.uid), {
          username: UsernameInp1.value
         }).then(() => {
         alert('Registration successful!'); // Provide feedback to the user
@@ -112,7 +113,7 @@ let SignInUser = (evt) => {
             console.log('Authentication successful:', Credentials);
 
             // Fetch email and username from the database
-            const userRef = ref(db, 'UserAuthList/' + Credentials.user.uid);
+            const userRef =ref (db, 'UserAuthList/' + Credentials.user.uid);
             get(userRef).then((snapshot) => {
                 if (snapshot.exists()) {
                     const userEmail = Credentials.user.email;
@@ -124,7 +125,10 @@ let SignInUser = (evt) => {
                     In.classList.add('active');
                     wrapper.classList.remove('active-popup');
                     alert(`User with email ${userEmail} has logged in.\nWelcome ${username}!`);
+                    window.location.href = 'index.html';
+                    document.getElementById('name').textContent = `${username}`;
                     // Store user data based on "Remember Me" checkbox
+                    
                     if (RememberMeCheckbox.checked) {
                         // Use localStorage for persistent storage
                         localStorage.setItem("user-info", JSON.stringify({
@@ -146,6 +150,7 @@ let SignInUser = (evt) => {
             // Log and store information within the same then block
             console.log('User credentials stored in storage:', Credentials.user);
             console.log('User info stored in storage:', sessionStorage.getItem("user-info"));
+
         })
         .catch((error) => {
             alert(error.message);
@@ -172,32 +177,84 @@ MainForm2.addEventListener('submit',ForgotPassword);
 
 
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async() => {
     // Check if user is logged in based on stored data
     const storedUserInfo = JSON.parse(localStorage.getItem("user-info")) || JSON.parse(sessionStorage.getItem("user-info"));
     const storedUserCreds = JSON.parse(localStorage.getItem("user-creds")) || JSON.parse(sessionStorage.getItem("user-creds"));
 
     if (storedUserInfo && storedUserCreds) {
         // The user is already logged in
+        document.getElementById('name').textContent = `${storedUserInfo.username}`;
 
-        Out.classList.add('active');
+      Out.classList.add('active');
         In.classList.add('active');
         // You can perform additional actions as needed
+                const userId = storedUserCreds.uid;
+
+                    // Fetch and display user profile image
+                    const user = auth.currentUser;
+                    const downloadURL = await getProfileImageURL(user);
+                    if (downloadURL) {
+                        // Update the image source for the specified IDs
+
+                        const menuButton = document.getElementById("menuButton");
+                        const profileImageElement = document.getElementById("profileImageElement");
+            
+
+
+                            menuButton.src = downloadURL;
+
+            
+
+                            profileImageElement.src = downloadURL;
+
+                    }
     } else {
         Out.classList.remove('active');
         In.classList.remove('active');
         // The user is not logged in
         // You may want to show the login/register form
     }
-});
+    async function getProfileImageURL(user) {
+        const storage = getStorage(app);
+        const userImagesRef = storageRef(storage, `profile_images/${storedUserCreds.uid}`);
+    
+        try {
+            const items = await listAll(userImagesRef);
+            if (items.items.length > 0) {
+                // If there are items, get the download URL of the first item (assuming only one image)
+                const downloadURL = await getDownloadURL(items.items[0]);
+                return downloadURL;
+            }
+        } catch (error) {
+            console.error('Error fetching profile image URL:', error);
+        }
+    
+    }
+    var nameElement = document.getElementById("name");
 
+    // Check if the element exists
+    if (nameElement) {
+        // Get the content of the h3 element
+        var content = nameElement.textContent;
+
+        // Check if the content is longer than 12 digits
+        if (content.length > 12) {
+            // Trim the content to 10 digits and add three dots
+            var trimmedContent = content.slice(0, 12) + "...";
+
+            // Update the content of the h3 element
+            nameElement.textContent = trimmedContent;
+        }
+    }
+});
 
 
 /*
  *signout
  */
 let signOutBtn = document.getElementById('signOutBtn');
-
+let subMenu= document.getElementById("subMenu");
 // Function to handle user sign-out
 let signOutUser = () => {
     // Sign out the user
@@ -211,15 +268,21 @@ let signOutUser = () => {
         // You can perform additional actions upon sign-out if needed
 
         // Alert to indicate successful sign-out
-        alert('You have been signed out.');
+        alert('You have been signed out.',2000);
+        // Force reload the current page, bypassing the cache
+        window.location.href = 'index.html';
+
         Out.classList.remove('active');
         In.classList.remove('active');
+        subMenu.classList.remove('open-menu')
+
     }).catch((error) => {
         // Handle errors if sign-out fails
         console.error('Sign-out error:', error.message);
         alert('Sign-out failed. Please try again.');
     });
 };
-
 // Attach the sign-out function to the button click event
 signOutBtn.addEventListener('click', signOutUser);
+
+
