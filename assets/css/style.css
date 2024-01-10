@@ -247,16 +247,16 @@ h6 {
 
 }
 
-@media (min-width: 445px) {
+@media (min-width: 600px) {
 
   .out.active {
     position: absolute;
     margin-left: auto;
-    margin-right:-22%;
+    margin-right: auto;
 
   }
 }
-@media (max-width: 445px) {
+@media (max-width: 600px) {
   .navba ul {
     flex-direction: column;
   }
@@ -275,11 +275,7 @@ h6 {
   .out.active{
     transform: scale(1);
   }
-  .out.active:hover{
-  background: #fff;
-  color: #5846f9;
-  cursor: pointer;
-  }
+
   .in.active{
     transform: scale(0);
 
@@ -479,6 +475,104 @@ h6 {
 .navbar-mobile .dropdown>.dropdown-active {
   display: block;
 }
+.profile{
+  width: 45px;
+  height: 45px;
+  border-radius: 100%;
+}
+
+/*--------------------------------------------------------------
+# User Profile Section
+--------------------------------------------------------------*/
+.sub-menu-wrap{
+  position: fixed;
+  top: 230px;
+  left: 79%;
+
+  z-index: 998;
+  width: 320px;
+  box-shadow: 0 0 30px rgba(0,0,0,.5);
+  overflow: hidden;
+  transition: transform .5s ease, height .2s ease;
+  background-color: rgba(255, 255, 255, 1);
+  padding: 20px;
+  margin: 10px;
+  transform: scale(0);
+}
+@media (max-width: 400px) {
+  .sub-menu-wrap{
+    width: 280px;
+  }
+  }
+@media (max-width: 840px) {
+.sub-menu-wrap{
+  left: 70%;
+}
+}
+@media (max-width: 600px) {
+  .sub-menu-wrap{
+    left: 50%;
+  }
+  }
+.sub-menu-wrap.open-menu{
+  transform: scale(1);
+  transform: translate(-50%,-50%);
+}
+.user-info img{
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  margin-right: 10px;
+}
+.user-info{
+  display: flex;
+  align-items: center;
+}
+.user-info h3{
+  font-weight: 500;
+  margin: auto;
+}
+
+.sub-menu hr{
+  border: 0;
+  height: 1px;
+  width: 100%;
+  background: #ccc;
+  margin: 15px 0 10px;
+  opacity: 100%;
+}
+.sub-menu-link{
+  display: flex;
+  align-items: center;
+  color:#444444;
+  text-decoration: none;
+  margin: 12px 0;
+}
+.sub-menu-link p{
+  width: 100%;
+  margin: auto;
+  
+}
+.sub-menu-link img{
+  width: 40px;
+  background: #e5e5e5;
+}
+.sub-menu-link:hover p{
+  font-weight: 600;
+}
+.sub-menu-link img{
+  width: 40px;
+  border-radius: 50%;
+  padding: 8px;
+  margin-right: 15px;
+}
+.sub-menu-link span{
+  font-size: 22px;
+  transition: transform 0.5s;
+}
+.sub-menu-link:hover span{
+  transform:translateX(5px);
+}
 
 /*--------------------------------------------------------------
 # LOGIN popup Section
@@ -491,11 +585,10 @@ h6 {
 }
 @media (max-width: 376px) {
   .wrapper.active-popup{
-    width: 350px;
+    width: 330px;
   }
-  .wrapper .form-box{
-    width: 100%;
-    padding: 40px;
+  .form-box{
+    padding: 10px;
   }
   
 }
@@ -513,9 +606,10 @@ h6 {
   z-index: 998;
   width: 400px;
   height: 300px;
-  background: linear-gradient(45deg, rgba(86, 58, 250, 0.9) 0%, rgba(116, 15, 214, 0.9) 100%);
-  border: 2px solid rgba(24, 6, 185, 0.8);
-  border-radius: 20px;
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.85);
+  border: 2px solid ;
+  border-radius: 20px solid #7b27d8;
   box-shadow: 0 0 30px rgba(0,0,0,.5);
   display: flex;
   justify-content: center;
@@ -533,8 +627,9 @@ h6 {
   z-index: 998;
   width: 400px;
   height: 440px;
-  background: linear-gradient(45deg, rgba(86, 58, 250, 0.9) 0%, rgba(116, 15, 214, 0.9) 100%);
-  border: 2px solid rgba(24, 6, 185, 0.8);
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.85);
+  border: 2px solid #7b27d8;
   border-radius: 20px;
   box-shadow: 0 0 30px rgba(0,0,0,.5);
   display: flex;
@@ -580,7 +675,8 @@ h6 {
   right: 0;
   width: 45px;
   height: 45px;
-  background: #ccc;
+  background: #7b27d8;
+  color: #ffffff;
   font-size: 2em;
   display: flex;
   justify-content: center;
@@ -591,14 +687,14 @@ h6 {
 }
 .form-box h2,.form-box h3{
   font-size: 2em;
-  color: #ccc;
+  color: #444444;
   text-align: center;
 }
 .input-box{
   position: relative;
   width: 100%;
   height: 50px;
-  border-bottom: 2px solid #ccc;
+  border-bottom: 2px solid #444444;
   margin: 30px 0;
 }
 .input-box label{
@@ -607,7 +703,7 @@ h6 {
   left: 5px;
   transform: translateY(-50%);
   font-size: 1em;
-  color: #ccc;
+  color: #444444;
   font-weight: 500;
   pointer-events: none;
   transition: .5s;
@@ -624,7 +720,7 @@ h6 {
   border: none;
   outline: none;
   font-size: 1em;
-  color: #ccc;
+  color: #444444;
   font-weight: 600;
   padding: 0 35px 0 5px;
 }
@@ -632,32 +728,38 @@ h6 {
   position: absolute;
   right: 8px;
   font-size: 1.2em;
-  color: #ccc;
+  color: #444444;
   line-height: 57px;
 }
 .remember-forgot{
   font-size: .9em;
-  color: #ccc;
+  color: #444444;
   font-weight: 500;
   margin: -15px 0 15px;
   display: flex;
   justify-content: space-between;
 }
 .remember-forgot label input{
-  accent-color: #ccc;
+  accent-color: #444;
   margin-right: 3px;
 }
 .forgot{
-  color: #ccc;
+  color: #444444;
   text-decoration: none;
 }
 .forgot:hover{
   text-decoration: underline;
 }
+.form-box .btn:hover{
+  background: #ccc;
+  color:#7b27d8
+
+}
 .form-box .btn{
   width: 100%;
   height: 45px;
-  background: #ccc;
+  background: #7b27d8;
+  color: #eee;
   border: none;
   outline: none;
   border-radius: 6px;
@@ -667,13 +769,13 @@ h6 {
 }
 .login-register{
   font-size: .9em;
-  color: #ccc;
+  color: #444444;
   text-align: center;
   font-weight: 500;
   margin: 25px 0 10px;
 }
 .login-register p a{
-  color: #ccc;
+  color: #444444;
   text-decoration: none;
   font-weight: 600;
 }
