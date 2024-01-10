@@ -77,10 +77,9 @@
       <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       <nav class="navba">
         <ul>
-          <li class="getstart out" id="signOutBtn">SIGNOUT</li>
+          <!--li class="getstart out" id="signOutBtn">SIGNOUT</li-->
           <li class="btnLogin-popup getstart in" id="login"  >LOGIN</li>
-
-         
+          <li class="out" ><img class="profile" id="menuButton" src="assets/img/user-profile.png" alt=""></li>
         </ul>
         </nav>
     </div>
@@ -115,7 +114,7 @@
 
         </div>
         <div class="input-box">
-          <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+          <span class="icon"onclick="pass()"><ion-icon  name="lock-closed" id="pass-icon"></ion-icon></span>
           <input type="password" id="passwordInp" placeholder="Password" required>
         </div>
         <div class="remember-forgot">
@@ -143,7 +142,7 @@
 
         </div>
         <div class="input-box">
-          <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+          <span class="icon"><ion-icon onclick="pass1()" name="lock-closed" id="pass-icon1"></ion-icon></span>
           <input type="password" id="passwordInp1" placeholder="Password" required>
 
         </div>
@@ -159,6 +158,37 @@
 
   </div>
   <!-- End LOGIN popup -->
+  <!-- ======= User Profile ======= -->
+    <div class="sub-menu-wrap" id="subMenu">
+      <div class="sub-menu">
+        <div class="user-info">
+          <img id="profileImageElement" src="assets/img/user-profile.png" alt="">
+          <h3 id="name">123456789123456789</h3>
+        </div>
+        <hr>
+        <a href="new.html" class="sub-menu-link">
+          <img src="assets/img/profile.png" alt="">
+          <p>Edit Profile</p>
+          <span>></span>
+        </a>
+        <a href="userinfo.html" class="sub-menu-link">
+          <img src="assets/img/setting.png" alt="">
+          <p>Settings</p>
+          <span>></span>
+        </a>
+        <a href="#" class="sub-menu-link">
+          <img src="assets/img/help.png" alt="">
+          <p>Help</p>
+          <span>></span>
+        </a>
+        <a href="#" class="sub-menu-link">
+          <img src="assets/img/logout.png" alt="">
+          <p id="signOutBtn">Logout</p>
+          <span>></span>
+        </a>
+      </div>
+    </div>
+  <!-- End User profile -->
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
 
@@ -688,8 +718,9 @@
 
 
   <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
   <script type="module" src="assets/js/script.js"></script>
+  <script src="assets/js/main.js"></script>
+
   
 
 
