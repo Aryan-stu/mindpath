@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>MindPath-Index</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/assessmentStyle.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top header-inner-pages ">
+    <div class="container d-flex align-items-center justify-content-between">
+      
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto" href="index.html">Home</a></li>
+          <li><a class="nav-link scrollto" href="index.html#about">About</a></li>
+          <li><a class="nav-link scrollto" href="index.html#services">Services</a></li>
+          <li><a class="nav-link scrollto " href="index.html#testimonials">Testimonials</a></li>
+          <!--li><a class="nav-link scrollto" href="#pricing">Subscribtions</a></li-->
+          <li class="dropdown"><a href="#"><span>Products</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li class="dropdown"><a href="resource.html"><span>Resources</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="resource.html#hero">Sage-Bot</a></li>
+                  <li><a href="resource.html#info">Articles and Info</a></li>
+                  <li><a href="resource.html#tools">Assessment Tools</a></li>
+                  <li><a href="resource.html#others">Other Contacts</a></li>
+                  <li><a href="resource.html#crisis">Crisis Helpline</a></li>
+                </ul>
+                <li class="dropdown"><a href="#"><span>Management</span> <i class="bi bi-chevron-right"></i></a>
+                  <ul>
+                    <li><a href="#">Track Habits</a></li>
+                    <li><a href="#">Symptoms Report</a></li>
+                    <li><a href="#">Book Sessions</a></li>
+                    <li><a href="#">therapy methods</a></li>
+                    <li><a href="#">wellness resources</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Daily Diary</a></li>
+              <li><a href="#">Feedback</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+        
+      </nav><!-- .navbar -->
+      <h1 class="logo"><a href="index.html">MindPath</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      <nav class="navba">
+        <ul>
+          <!--li class="getstart out" id="signOutBtn">SIGNOUT</li-->
+          <li class="btnLogin-popup getstart in" id="login"  >LOGIN</li>
+          <li class="out" ><img class="profile" id="menuButton" src="assets/img/user-profile.png" alt=""></li>
+        </ul>
+        </nav>
+    </div>
+  </header><!-- End Header -->
+  <main id="main">
+    <section class="breadcrumbs" >
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Lifestyle Assessment</h2>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li>Lifestyle Assessment</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <section class="inner-page">
+  <!-- ======= LOGIN popup ======= -->
+  <div class="wrapper2">
+    <span class="icon-close2">
+      <ion-icon name="close"></ion-icon>
+    </span>
+    <div class="form-box">
+      <h3>Enter Email to reset</h3>
+      <form action="#" id="MainForm2">
+        <div class="input-box">
+          <span class="icon"><ion-icon name="mail"></ion-icon></span>
+          <input type="email" class="snd" id="emailInp2" placeholder="Email" required>
+          <button type="submit"  class="btn">Send</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="wrapper">
+    <span class="icon-close">
+      <ion-icon name="close"></ion-icon>
+    </span>
+    <div class="form-box log">
+      <h2>LOGIN</h2>
+      <form action="#" id="MainForm">
+        <div class="input-box">
+          <span class="icon"><ion-icon name="mail"></ion-icon></span>
+          <input type="email" id="emailInp" placeholder="Email" required>
+
+        </div>
+        <div class="input-box">
+          <span class="icon"onclick="pass()"><ion-icon  name="lock-closed" id="pass-icon"></ion-icon></span>
+          <input type="password" id="passwordInp" placeholder="Password" required>
+        </div>
+        <div class="remember-forgot">
+          <label ><input type="checkbox" id="rememberMeCheckbox">Remember me</label>
+          <label class="forgotpass forgot">Forgot Password?</label>
+        </div>
+        <button type="submit"  class="btn" id="loginbtn">Login</button>
+        <div class="login-register">
+          <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
+        </div>
+      </form>
+    </div>
+
+    <div class="form-box register">
+      <h2>Registration</h2>
+      <form id="MainForm1">
+        <div class="input-box">
+          <span class="icon"><ion-icon name="person"></ion-icon></span>
+          <input type="text" id="usernameInp1" placeholder="Username" required>
+
+        </div>
+        <div class="input-box">
+          <span class="icon"><ion-icon name="mail"></ion-icon></span>
+          <input type="email" id="emailInp1" placeholder="Email" required>
+
+        </div>
+        <div class="input-box">
+          <span class="icon"><ion-icon onclick="pass1()" name="lock-closed" id="pass-icon1"></ion-icon></span>
+          <input type="password" id="passwordInp1" placeholder="Password" required>
+
+        </div>
+        <div class="remember-forgot">
+          <label ><input type="checkbox" required>I Agree to Terms & Conditions</label>
+        </div>
+        <button type="submit" onclick=""  class="btn">Register</button>
+        <div class="login-register">
+          <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+        </div>
+      </form>
+    </div>
+
+  </div>
+  <!-- End LOGIN popup -->
+  <!-- ======= User Profile ======= -->
+    <div class="sub-menu-wrap" id="subMenu">
+      <div class="sub-menu">
+        <div class="user-info">
+          <img id="profileImageElement" src="assets/img/user-profile.png" alt="Profile Image" >
+          <h3 id="name">[Username]</h3>
+        </div>
+        <hr>
+        <a href="userprofile.html" class="sub-menu-link">
+          <img src="assets/img/profile.png" alt="">
+          <p>Edit Profile</p>
+          <span>></span>
+        </a>
+        <a href="userinfo.html" class="sub-menu-link">
+          <img src="assets/img/setting.png" alt="">
+          <p>Settings</p>
+          <span>></span>
+        </a>
+        <a href="#" class="sub-menu-link">
+          <img src="assets/img/help.png" alt="">
+          <p>Help</p>
+          <span>></span>
+        </a>
+        <a href="#" class="sub-menu-link">
+          <img src="assets/img/logout.png" alt="">
+          <p id="signOutBtn">Logout</p>
+          <span>></span>
+        </a>
+      </div>
+    </div>
+  <!-- End User profile -->
+  <!-- Assessment Section -->
+
+<style>
+
+    #container {
+margin-top: 50px;
+
+        min-height: 100%;
+
+    }
+    #right-frame {
+      margin-left: 5%;
+        width: 90%;
+        height: 100%;
+        border: 1px solid black;
+    }
+    #left-frame button {
+        display: block;
+        width: 30%;
+        background: none;
+        border: none;
+    }
+</style>
+<section id="hero container" class=" align-items-center">
+
+<div id="container" class="container-fluid" data-aos="fade-up">
+    <div id="right-frame"class="col-xl-4 col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="150" style="min-height: 500px;">
+        <div id="content1" class="content-div">
+          <div class="LTest" id="test" style="display: none;">
+            <h2>Lifestyle Assessment</h2>
+            <p>please do the assessment below for your result.</p>
+            <button><a href="LAssessment.html">To the Assessment</a></button>
+          </div>
+          <div class="result" id="result" style="display: none;">
+            <h2 style="margin-top: 20px; margin-left: 20px">Lifestyle Report:</h2>
+            <section class="graph">
+              <div class="semi" style="margin-left: 42%;">
+                <div role="progressbar" class="progress-bar-1" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100" style="--value: 0"></div>
+                <p>Lifestyle Efficiency</p>
+              </div>
+            </section>
+            <div class="assess" style="display: flex; width: 100%;">
+              <div class="containers" style="width: 30%; margin-left: 2%; margin-right: 3%;">
+                  <h3>Things to be appreciated:</h3>
+                  <label id="ultraProcessed1" style="display: none;">
+                    <ul>
+                      <li><p>You are avoiding ultra processed food which is good.</p></li>
+                    </ul>
+                  </label>
+                  <label id="fastFood1" style="display: none;">
+                    <ul>
+                      <li><p>You are avoiding fast food which is good.</p></li>
+                    </ul>
+                  </label>
+                  <label id="ciggarette1" style="display: none;">
+                    <ul>
+                      <li><p>You are avoiding ciggeratte which is good.</p></li>
+                    </ul>
+                  </label>
+                  <label id="alcohol1" style="display: none;">
+                    <ul>
+                      <li><p>You are avoiding alcohol which is good.</p></li>
+                    </ul>
+                  </label>
+                  <label id="sugarDrinks1" style="display: none;">
+                    <ul>
+                      <li><p>You are avoiding sugar-based drinks which is good.</p></li>
+                    </ul>
+                    </label>
+                    <label id="redMeat1" style="display: none;">
+                      <ul>
+                        <li><p>You are avoiding red meat drinks which is good.</p></li>
+                      </ul>
+                    </label>
+                    <label id="sleep1" style="display: none;">
+                      <ul>
+                        <li><p>You have a well maintained sleep cycle.</p></li>
+                      </ul>
+                    </label>
+                    <label id="exersice1" style="display: none;">
+                      <ul>
+                        <li><p>You have a well maintained exersice schedule.</p></li>
+                      </ul>
+                    </label>
+                    <label id="social1" style="display: none;">
+                      <ul>
+                        <li><p>You have a well maintained social activities schedule.</p></li>
+                      </ul>
+                    </label>
+                    <label id="stress1" style="display: none;">
+                      <ul>
+                        <li><p>You utilize stress management techniques during stressed situation.</p></li>
+                      </ul>
+                    </label>
+                    <label id="screen1" style="display: none;">
+                      <ul>
+                        <li><p>You have a well maintained screen time.</p></li>
+                      </ul>
+                    </label>
+              </div>
+              <div class="containers" style="width: 33%;">
+                  <h3>Things to be aware of:</h3>
+                  <label id="ultraProcessed0" style="display: none;">
+                    <ul>
+                      <li><p >You are eating ultra processed food which may cause mental health issues.</p></li>
+                    </ul>
+                  </label>
+                  <label id="fastFood0" style="display: none;">
+                    <ul>
+                      <li><p >You are eating fast food which may cause mental health issues.</p></li>
+                    </ul>
+                  </label>
+                  <label id="ciggarette0" style="display: none;">
+                    <ul>
+                      <li><p >You are consuming ciggeratte which may cause mental health issues.</p></li>
+                    </ul>
+                  </label>
+                  <label id="alcohol0" style="display: none;">
+                    <ul>
+                      <li><p >You are consuming alcohol which may cause mental health issues.</p></li>
+                    </ul>
+                  </label>
+                  <label id="sugarDrinks0" style="display: none;">
+                    <ul>
+                      <li><p >You are consuming sugar-based drinks which may cause mental health issues.</p></li>
+                    </ul>
+                  </label>
+                  <label id="redMeat0" style="display: none;">
+                    <ul>
+                      <li><p >You are consuming red meat which may cause mental health issues.</p></li>
+                    </ul>
+                  </label>
+                  <label id="sleep0" style="display: none;">
+                    <ul>
+                      <li><p >Try to maintain 6 to 8 hours of sleep daily to prevent mental health issues.</p></li>
+                    </ul>
+                  </label>
+                  <label id="exersice0" style="display: none;">
+                    <ul>
+                      <li><p >Try to maintain 30 min to 2 hours of exersice daily to prevent mental health issues.</p></li>
+                    </ul>
+                  </label>
+                  <label id="social0" style="display: none;">
+                    <ul>
+                      <li><p >Try to maintain atleast a weekly social activity to prevent mental health issues.</p></li>
+                    </ul>
+                  </label>
+                  <label id="stress0" style="display: none;">
+                    <ul>
+                      <li><p >Utilizing stress management techniques is good for mental health.</p></li>
+                    </ul>
+                  </label>
+                  <label id="screen0" style="display: none;">
+                    <ul>
+                      <li><p >Utilizing stress management techniques is good for mental health.</p></li>
+                    </ul>
+                  </label>
+              </div>
+              <div class="containers" style="width: 30%; margin-left: 3%; margin-right: 2%;">
+                  <h3>Things needs attention:</h3>
+                  <label id="ultraProcessed-1" style="display: none;">
+                    <ul>
+                      <li><p>You are eating ultra processed food in an unhealthy amount. So, stop it as soon as possible.</p></li>
+                    </ul>
+                  </label>
+                  <label id="fastFood-1" style="display: none;">
+                    <ul>
+                      <li><p>You are eating fast food in an unhealthy amount. So, stop it as soon as possible.</p></li>
+                    </ul>
+                  </label>
+                  <label id="ciggarette-1" style="display: none;">
+                    <ul>
+                      <li><p>You are consuming ciggeratte in an unhealthy amount. So, stop it as soon as possible.</p></li>
+                    </ul>
+                  </label>
+                  <label id="alcohol-1" style="display: none;">
+                    <ul>
+                      <li><p>You are consuming alcohol in an unhealthy amount. So, stop it as soon as possible.</p></li>
+                    </ul>
+                  </label>
+                  <label id="sugarDrinks-1" style="display: none;">
+                    <ul>
+                      <li><p>You are consuming sugar-based drink in an unhealthy amount. So, stop it as soon as possible.</p></li>
+                    </ul>
+                  </label>
+                  <label id="redMeat-1" style="display: none;">
+                    <ul>
+                      <li><p>You are consuming red meat in an unhealthy amount. So, stop it as soon as possible.</p></li>
+                    </ul>
+                  </label>
+                  <label id="sleep-1" style="display: none;">
+                    <ul>
+                      <li><p>Your sleep hours are highly irregular.</p></li>
+                    </ul>
+                  </label>
+                  <label id="exersice-1" style="display: none;">
+                    <ul>
+                      <li><p>Your exersice hours are highly irregular.</p></li>
+                    </ul>
+                  </label>
+                  <label id="social-1" style="display: none;">
+                    <ul>
+                      <li><p>Your social activities are highly irregular.</p></li>
+                    </ul>
+                  </label>
+                  <label id="stress-1" style="display: none;">
+                    <ul>
+                      <li><p>You should consider using stress management technique during stress.</p></li>
+                    </ul>
+                  </label>
+                  <label id="screen-1" style="display: none;">
+                    <ul>
+                      <li><p>Your screen time is too high.</p></li>
+                    </ul>
+                  </label>
+              </div>
+          </div>
+          <div style="margin-left: 42%; margin-top: 20px;margin-bottom: 20px;">
+            <button><a href="treatment.html">Improve your lifestyle</a></button>
+          </div>
+          <div style=" margin-left: 2%; margin-top: 20px; margin-bottom: 20px;">
+            <h3>Warning:</h3>
+            <label id="weight-2" style="display: none;">
+              <ul>
+                <li><p>Your sudden increase or decrease in weight.</p></li>
+              </ul>
+            </label>
+            <label id="task-2" style="display: none;">
+              <ul>
+                <li><p>Your recent inefficiency in daily tasks.</p></li>
+              </ul>
+            </label>
+            <label id="diet-2" style="display: none;">
+              <ul>
+                <li><p>Your sudden changes in dietary habits.</p></li>
+              </ul>
+            </label>
+            <label id="substance-2" style="display: none;">
+              <ul>
+                <li><p>Your recent inclination towards substances.</p></li>
+              </ul>
+            </label>
+            <p>Can be the direct indication of poor mental health. we suggest you to consult any mental health counselor or psychiatrist if you are not feeling well. </p>
+            <div style="display: flex;">
+              <div style="margin: 10px;">
+                <button><a href="nearyou.html">Find Counselor near you</a></button>
+              </div>
+              <p style="margin: 12px;">OR</p>
+              <div style="margin: 10px;">
+                <button><a href="appointment.html">Get online appointment</a></button>
+              </div>
+            </div>
+          </div>
+          <div style="margin-left: 35%; margin-top: 50px; margin-bottom: 20px;">
+            <h4>Not sure about your answers?</h4>
+            <div style="margin-left: 10%;margin-top: 20px; margin-bottom: 20px;">
+            <button><a href="LAssessment.html">Give Assessment Again</a></button>
+          </div>
+          </div>
+          </div>   
+        </div>
+</section>
+</section>
+ <!-- ======= Footer ======= -->
+ <footer id="footer">
+
+  <div class="footer-top">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-3 col-md-6 footer-contact">
+          <h3>Mindpath</h3>
+          <p>
+            A108 Adam Street <br>
+            Lucknow, UP 226016<br>
+            India <br><br>
+            <strong>Phone:</strong> +91 9120891486<br>
+            <strong>Email:</strong> mindpathmentalhealth@gmail.com<br>
+          </p>
+        </div>
+
+        <div class="col-lg-2 col-md-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Lifestyle</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Mental health</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Articles</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">chatbot</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">assessment</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-6 footer-newsletter">
+          <h4>Join Our Newsletter</h4>
+          <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+          <form action="" method="post">
+            <input type="email" name="email"><input type="submit" value="Subscribe">
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <div class="copyright-wrap d-md-flex py-4">
+      <div class="me-md-auto text-center text-md-start">
+        <div class="copyright">
+          &copy; Copyright <strong><span>mindpath</span></strong>. All Rights Reserved
+        </div>
+      <div class="social-links text-center text-md-right pt-3 pt-md-0">
+        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+    </div>
+
+  </div>
+</footer><!-- End Footer -->
+
+   <!-- ======= End Personal Detail pop-up ======= -->
+   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+   <div id="preloader"></div>
+ 
+   <!-- Vendor JS Files -->
+   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+   <script src="assets/vendor/aos/aos.js"></script>
+   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+   <script src="assets/vendor/php-email-form/validate.js"></script>
+ 
+     <!--login icons-->
+     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+ 
+ 
+   <!-- Template Main JS File -->
+   <script type="module" src="assets/js/assessmentScript.js"></script>
+   <script src="assets/js/assessmentMain.js"></script>
+ 
+ <!-- ... (your other imports) ... -->
+ 
+ 
+ 
+ 
+ </body>
+ 
+ </html>

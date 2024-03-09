@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/LAssessmentStyle.css">
+    <title>Lifestyle Based Assessment Test</title>
+</head>
+<body>
+    <div class="heading">
+        <h1>Lifestyle Based Assessment Test</h1>  
+        <h2>Name:</h2><h2 id="name"></h2>          
+    </div>
+    <!-- Progress bar above the form -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div><br>
+
+    <!-- Form -->
+    <form id="quizForm">
+        <!-- Question 1 -->
+        <div class="question" id="question1">
+
+            <h2 class="section" id="section">Section A: Diet</h2>
+
+            <h2>Question A.1</h2>
+            <p>How often do you consume ultra-processed foods such as instant/frozen meal or packaged snacks?</p>
+            <label for="answer1a"><input type="radio" name="answer1" id="answer1a" value="Weekly or more" data-value="-1" required> weekly or more</label>
+            <label for="answer1b"><input type="radio" name="answer1" id="answer1b" value="Occasionally" data-value="0"> occasionally</label>
+            <label for="answer1c"><input type="radio" name="answer1" id="answer1c" value="Hardly or never" data-value="1"> hardly or never</label>
+            <button type="button" class="next" onclick="nextQuestion()">Next</button>
+
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question" id="question2">
+
+            <h2 class="section" id="section">Section A: Diet</h2>
+
+            <h2>Question A.2</h2>
+            <p>How often do you consume Fast food or outside meal?</p>
+            <label for="answer2a"><input type="radio" name="answer2" id="answer2a" value="Weekly or more" data-value="-1" required> Weekly or more</label>
+            <label for="answer2b"><input type="radio" name="answer2" id="answer2b" value="Occasionally" data-value="0"> Occasionally</label>
+            <label for="answer2c"><input type="radio" name="answer2" id="answer2c" value="Never" data-value="1">Never</label>
+            <button type="button" class="prev" onclick="prevQuestion()">Previous</button>
+            <button type="button" class="next" onclick="nextQuestion()">Next</button>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question" id="question3">
+
+            <h2 class="section" id="section">Section A: Diet</h2>
+
+            <h2>Question A.3</h2>
+            <p>How often do you consume ciggeratte or tobaco?</p>
+            <label for="answer3a"><input type="radio" name="answer3" id="answer3a" value="Weekly or more" data-value="-1" required> Weekly or more</label>
+            <label for="answer3b"><input type="radio" name="answer3" id="answer3b" value="Occasionally" data-value="0"> Occasionally</label>
+            <label for="answer3c"><input type="radio" name="answer3" id="answer3c" value="Never" data-value="1">Never</label>
+            <button type="button" class="prev" onclick="prevQuestion()">Previous</button>
+            <button type="button" class="next" onclick="nextQuestion()">Next</button>
+        </div>
+        <div class="question" id="question4">
+
+            <h2 class="section" id="section">Section A: Diet</h2>
+
+            <h2>Question A.4</h2>
+            <p>How often do you consume Alcohol?</p>
+            <label for="answer4a"><input type="radio" name="answer4" id="answer4a" value="Weekly or more" data-value="-1" required> Weekly or more</label>
+            <label for="answer4b"><input type="radio" name="answer4" id="answer4b" value="Occasionally" data-value="0"> Occasionally</label>
+            <label for="answer4c"><input type="radio" name="answer4" id="answer4c" value="Never" data-value="1">Never</label>
+            <button type="button" class="prev" onclick="prevQuestion()">Previous</button>
+            <button type="button" class="next" onclick="nextQuestion()">Next</button>
+        </div>
+        <div class="question" id="question5">
+
+            <h2 class="section" id="section">Section A: Diet</h2>
+
+            <h2>Question A.5</h2>
+            <p>How often do you consume sugar drink?</p>
+            <label for="answer5a"><input type="radio" name="answer5" id="answer5a" value="Weekly or more" data-value="-1" required> Weekly or more</label>
+            <label for="answer5b"><input type="radio" name="answer5" id="answer5b" value="Occasionally" data-value="0"> Occasionally</label>
+            <label for="answer5c"><input type="radio" name="answer5" id="answer5c" value="Never" data-value="1">Never</label>
+            <button type="button" class="prev" onclick="prevQuestion()">Previous</button>
+            <button type="button" class="next" onclick="nextQuestion()">Next</button>
+        </div>
+        <div class="question" id="question6">
+
+            <h2 class="section" id="section">Section A: Diet</h2>
+
+            <h2>Question A.6</h2>
+            <p>How often do you consume red meat like beef or pork?</p>
+            <label for="answer6a"><input type="radio" name="answer6" id="answer6a" value="Weekly or more" data-value="-1" required> Weekly or more</label>
+            <label for="answer6b"><input type="radio" name="answer6" id="answer6b" value="Occasionally" data-value="0"> Occasionally</label>
+            <label for="answer6c"><input type="radio" name="answer6" id="answer6c" value="Never" data-value="1">Never</label>
+            <button type="button" class="prev" onclick="prevQuestion()">Previous</button>
+            <button type="button" class="next" onclick="nextQuestion()">Next</button>
+        </div>
+        <div class="question" id="question7">
+
+            <h2 class="section" id="section">Section B: Habits</h2>
+
+            <h2>Question B.1</h2>
+            <p> How many hours of sleep you typically get on an average night?</p>
+            <label for="answer7a"><input type="radio" name="answer7" id="answer7a" value="Less than 7-8 hours" data-value="-1" required>Less than 7-8 hours</label>
+            <label for="answer7b"><input type="radio" name="answer7" id="answer7b" value="More than 7-8 hours" data-value="0">More than 7-8 hours</label>
+            <label for="answer7c"><input type="radio" name="answer7" id="answer7c" value="7-8 hours" data-value="1">7-8 hours</label>
+            <button type="button" class="prev" onclick="prevQuestion()">Previous</button>
+            <button type="button" class="next" onclick="nextQuestion()">Next</button>
+        </div>
+        <div class="question" id="question8">
+
+            <h2 class="section" id="section">Section B: Habits</h2>
+
+            <h2>Question B.2</h2>
+            <p>How often do you exersice?</p>
+            <label for="answer8a"><input type="radio" name="answer8" id="answer8a" value="Rarely" data-value="-1" required>Rarely</label>
+            <label for="answer8b"><input type="radio" name="answer8" id="answer8b" value="Inconsistently" data-value="0">Inconsistently</label>
+            <label for="answer8c"><input type="radio" name="answer8" id="answer8c" value="Daily" data-value="1">Daily</label>
+            <button type="button" class="prev" onclick="prevQuestion()">Previous</button>
+            <button type="button" class="next" onclick="nextQuestion()">Next</button>
+        </div>
+        <div class="question" id="question9">
+
+            <h2 class="section" id="section">Section B: Habits</h2>
+
+            <h2>Question B.3</h2>
+            <p>How often do you engage in social activities outside of school/work or family commitments?</p>
+            <label for="answer9a"><input type="radio" name="answer9" id="answer9a" value="Rarely" data-value="-1" required>Rarely</label>
+            <label for="answer9b"><input type="radio" name="answer9" id="answer9b" value="Inconsistently" data-value="0">Inconsistently</label>
+            <label for="answer9c"><input type="radio" name="answer9" id="answer9c" value="Weekly or more" data-value="1">Weekly or more</label>
+            <button type="button" class="prev" onclick="prevQuestion()">Previous</button>
+            <button type="button" class="next" onclick="nextQuestion()">Next</button>
+        </div>
+        <div class="question" id="question10">
+
+            <h2 class="section" id="section">Section B: Habits</h2>
+
+            <h2>Question B.4</h2>
+            <p>If you are in a stressed situation, will you tend to use any stress management techniques?</p>
+            <label for="answer10a"><input type="radio" name="answer10" id="answer10a" value="Never" data-value="-1" required>Never</label>
+            <label for="answer10b"><input type="radio" name="answer10" id="answer10b" value="Sometimes" data-value="0">Sometimes</label>
+            <label for="answer10c"><input type="radio" name="answer10" id="answer10c" value="Yes" data-value="1">Yes</label>
+            <button type="button" class="prev" onclick="prevQuestion()">Previous</button>
+            <button type="button" class="next" onclick="nextQuestion()">Next</button>
+        </div>
+        <div class="question" id="question11">
+
+            <h2 class="section" id="section">Section B: Habits</h2>
+
+            <h2>Question B.5</h2>
+            <p>How much is you average screen time?</p>
+            <label for="answer11a"><input type="radio" name="answer11" id="answer11a" value="8 hours or more" data-value="-1" required>8 hours or more</label>
+            <label for="answer11b"><input type="radio" name="answer11" id="answer11b" value="6-7 hours" data-value="0">6-7 hours</label>
+            <label for="answer11c"><input type="radio" name="answer11" id="answer11c" value="6 hours or less" data-value="1">6 hours or less</label>
+            <button type="button" class="prev" onclick="prevQuestion()">Previous</button>
+            <button type="button" class="next" onclick="nextQuestion()">Next</button>
+        </div>
+        <div class="question" id="question12">
+
+            <h2 class="section" id="section">Section C: Daily Functioning</h2>
+
+            <h2>Question C.1</h2>
+            <p>Did you recently notice any drastic change in your weight?</p>
+            <label for="answer12a"><input type="radio" name="answer12" id="answer12a" value="Yes" data-value="-2" required>Yes</label>
+            <label for="answer12c"><input type="radio" name="answer12" id="answer12c" value="No" data-value="2">No</label>
+            <button type="button" class="prev" onclick="prevQuestion()">Previous</button>
+            <button type="button" class="next" onclick="nextQuestion()">Next</button>
+        </div>
+        <div class="question" id="question13">
+
+            <h2 class="section" id="section">Section C: Daily Functioning</h2>
+
+            <h2>Question C.2</h2>
+            <p>Did you recently notice any drastic decrease in efficiency in your daily task?</p>
+            <label for="answer13a"><input type="radio" name="answer13" id="answer13a" value="Yes" data-value="-2" required>Yes</label>
+            <label for="answer13c"><input type="radio" name="answer13" id="answer13c" value="No" data-value="2">No</label>
+            <button type="button" class="prev" onclick="prevQuestion()">Previous</button>
+            <button type="button" class="next" onclick="nextQuestion()">Next</button>
+        </div>
+        <div class="question" id="question14">
+
+            <h2 class="section" id="section">Section C: Daily Functioning</h2>
+
+            <h2>Question C.3</h2>
+            <p>Did you recently notice any drastic change in dietary habits?</p>
+            <label for="answer14a"><input type="radio" name="answer14" id="answer14a" value="Yes" data-value="-2" required>Yes</label>
+            <label for="answer14c"><input type="radio" name="answer14" id="answer14c" value="No" data-value="2">No</label>
+            <button type="button" class="prev" onclick="prevQuestion()">Previous</button>
+            <button type="button" class="next" onclick="nextQuestion()">Next</button>
+        </div>
+        <div class="question" id="question15">
+
+            <h2 class="section" id="section">Section C: Daily Functioning</h2>
+
+            <h2>Question C.4</h2>
+            <p>Did you had any recent involvement in addictive substances?</p>
+            <label for="answer15a"><input type="radio" name="answer15" id="answer15a" value="Yes" data-value="-2" required>Yes</label>
+            <label for="answer15c"><input type="radio" name="answer15" id="answer15c" value="No" data-value="2">No</label>
+            <button type="button" class="prev" onclick="prevQuestion()">Previous</button>
+            <button type="button" class="next" onclick="nextQuestion()">Next</button>
+        </div>
+        <!-- Add more questions as needed -->
+
+        <!-- Submit button -->
+        <div id="submitSection">
+            <table id="answersTable" border="1.0">
+                <thead>
+                    <tr>
+                        <th>Question</th>
+                        <th>User's Answer</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ultra-processed food consumption</td>
+                        <td id="ans1"></td>
+                    </tr>
+                    <tr>
+                        <td>Fast food comsumption</td>
+                        <td id="ans2"></td>
+                    </tr>
+                    <tr>
+                        <td>ciggeratte or tobaco consumption</td>
+                        <td id="ans3"></td>
+                    </tr>
+                    <tr>
+                        <td>Alcohol consumption</td>
+                        <td id="ans4"></td>
+                    </tr>
+                    <tr>
+                        <td>sugar drink consumption</td>
+                        <td id="ans5"></td>
+                    </tr>
+                    <tr>
+                        <td>red meat consumption</td>
+                        <td id="ans6"></td>
+                    </tr>
+                    <tr>
+                        <td>sleep hours</td>
+                        <td id="ans7"></td>
+                    </tr>
+                    <tr>
+                        <td>exersice</td>
+                        <td id="ans8"></td>
+                    </tr>
+                    <tr>
+                        <td>involvement in social activities</td>
+                        <td id="ans9"></td>
+                    </tr>
+                    <tr>
+                        <td>stress management techniques usage</td>
+                        <td id="ans10"></td>
+                    </tr>
+                    <tr>
+                        <td>average screen time</td>
+                        <td id="ans11"></td>
+                    </tr>
+                    <tr>
+                        <td>drastic change in weight</td>
+                        <td id="ans12"></td>
+                    </tr>
+                    <tr>
+                        <td>drastic change in efficiency in daily task</td>
+                        <td id="ans13"></td>
+                    </tr>
+                    <tr>
+                        <td>drastic change in diet</td>
+                        <td id="ans14"></td>
+                    </tr>
+                    <tr>
+                        <td>recent involvement in substance</td>
+                        <td id="ans15"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button type="submit" class="submit" id="submitButton">Submit</button>
+            <button type="button" class="prev" onclick="prevQuestion()">Previous</button>
+        </div>
+    </form>
+<script >
+
+
+   let currentQuestion = 1;
+const totalQuestions = document.querySelectorAll('.question').length;
+const progressBar = document.getElementById('progressBar');
+
+function nextQuestion() {
+    const currentQuestionElement = document.getElementById(`question${currentQuestion}`);
+    
+    // Check if an answer is selected
+    const selectedAnswer = document.querySelector(`input[name="answer${currentQuestion}"]:checked`);
+    
+    if (!selectedAnswer) {
+        alert("Please select an answer before proceeding.");
+        return;
+    }
+
+    // Set the answer for the current question
+    const answer = selectedAnswer.value;
+    document.getElementById(`ans${currentQuestion}`).textContent = answer;
+
+    // Hide the current question
+    currentQuestionElement.style.display = 'none';
+
+    // Increment currentQuestion and update progress bar
+    currentQuestion++;
+    updateProgressBar();
+
+    // Check if there are more questions or if it's time to display the submit section
+    if (currentQuestion <= totalQuestions) {
+        const nextQuestionElement = document.getElementById(`question${currentQuestion}`);
+        nextQuestionElement.style.display = 'block';
+    } else {
+        document.getElementById('submitSection').style.display = 'block';
+    }
+}
+
+
+function prevQuestion() {
+    if (currentQuestion === totalQuestions + 1) {
+        // If currently on the submit section, go back to the last question
+        document.getElementById('submitSection').style.display = 'none';
+        currentQuestion = totalQuestions;
+        const currentQuestionElement = document.getElementById(`question${currentQuestion}`);
+        currentQuestionElement.style.display = 'none';
+        updateProgressBar();
+    }else{
+
+    const currentQuestionElement = document.getElementById(`question${currentQuestion}`);
+    currentQuestionElement.style.display = 'none';
+
+    currentQuestion--;
+    updateProgressBar();
+    }
+    if (currentQuestion >= 1) {
+        const prevQuestionElement = document.getElementById(`question${currentQuestion}`);
+        prevQuestionElement.style.display = 'block';
+    } 
+
+}
+
+
+function updateProgressBar() {
+    const progressPercentage = ((currentQuestion) / (totalQuestions+1)) * 100;
+    progressBar.style.width = `${progressPercentage}%`;
+}
+
+// Display the first question initially and update the progress bar
+document.getElementById('question1').style.display = 'block';
+updateProgressBar();
+
+document.getElementById('quizForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission
+
+    // Iterate over each question and get the user's answer
+    for (let i = 1; i <= totalQuestions; i++) {
+        const answer = document.querySelector(`input[name="answer${i}"]:checked`).value;
+        document.getElementById(`ans${i}`).textContent = answer;
+    }
+});
+        </script>
+        <script type="module" src="assets/js/LAssessmentScript.js"></script>
+</body>
+</html>
